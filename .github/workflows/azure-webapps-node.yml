@@ -40,7 +40,10 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
+        cache: 'npm'git add package-lock.json   # For npm
+git add yarn.lock           # For Yarn
+git commit -m "Add lock file for dependencies"
+git push
 
     - name: npm install, build, and test
       run: |
